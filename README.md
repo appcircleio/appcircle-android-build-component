@@ -10,7 +10,7 @@ Required Input Variables
 
 Optional Input Variables
 - `$AC_PROJECT_PATH`: Specifies the project path
-- `$AC_GRADLE_BUILD_PARAMS`: Extra arguments passed to build task
+- `$AC_GRADLE_BUILD_EXTRA_ARGS`: Extra arguments passed to build task
 
 Output Variables
 - `$AC_APK_PATH`: Path for the generated .apk file

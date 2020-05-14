@@ -32,11 +32,11 @@ inputs:
   title: Output type
   description: "Output type. For example: apk or bundle"
   helpText:
-- key: "AC_GRADLE_BUILD_PARAMS"
-  defaultValue: "$AC_GRADLE_BUILD_PARAMS"
+- key: "AC_GRADLE_BUILD_EXTRA_PARAMS"
+  defaultValue: "$AC_GRADLE_BUILD_EXTRA_ARGS"
   isRequired: false
   title: Gradle build parameters
-  description: "Add custom build parameters. For example: --stacktrace"
+  description: "Add custom build arguments. For example: --stacktrace"
   helpText:
 outputs:
 - key: "AC_APK_PATH"

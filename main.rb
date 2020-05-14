@@ -13,7 +13,7 @@ ac_output_type = get_env_variable("AC_OUTPUT_TYPE") || abort('Missing output typ
 ac_repo_path = get_env_variable("AC_REPOSITORY_DIR") || abort('Missing repo path.')
 ac_output_folder = get_env_variable("AC_OUTPUT_DIR") || abort('Missing output folder.')
 
-ac_gradle_params = get_env_variable("AC_GRADLE_BUILD_PARAMS") || ""
+ac_gradle_params = get_env_variable("AC_GRADLE_BUILD_EXTRA_ARGS") || ""
 ac_project_path = get_env_variable("AC_PROJECT_PATH") || "."
 
 def get_gradle_task(output_type, variants, module_name)
