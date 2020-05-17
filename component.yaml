@@ -32,7 +32,7 @@ inputs:
   title: Output type
   description: "Output type. For example: apk or bundle"
   helpText:
-- key: "AC_GRADLE_BUILD_EXTRA_PARAMS"
+- key: "AC_GRADLE_BUILD_EXTRA_ARGS"
   defaultValue: "$AC_GRADLE_BUILD_EXTRA_ARGS"
   isRequired: false
   title: Gradle build parameters
