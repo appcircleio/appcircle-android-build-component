@@ -1,6 +1,8 @@
 # Appcircle Android Build
 
-This component will build your Android application with gradle.
+This step builds your Android application for the architectures specified in your project. Created files will be .apk, or .aab if you select Android App Bundle in the project configuration.
+
+If your project includes a keystore, this step will generate a signed artifact. If you do not disable the Sign Application step, your artifact will be unsigned and re-signed using the keystore selected in the build configuration.
 
 Required Input Variables
 - `$AC_REPOSITORY_DIR`: Cloned git repository path
