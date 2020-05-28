@@ -40,10 +40,12 @@ inputs:
   helpText:
 outputs:
 - key: "AC_APK_PATH"
+  title: "APK Path"
   defaultValue: "AC_APK_PATH"
   description: "Path of the generated apk file."
   helpText:
 - key: "AC_AAB_PATH"
+  title: "AAB Path"
   defaultValue: "AC_AAB_PATH"
   description: "Path of the generated aab file."
   helpText:
