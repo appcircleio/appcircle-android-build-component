@@ -19,7 +19,7 @@ ac_project_path = get_env_variable("AC_PROJECT_PATH") || "."
 def get_gradle_task(output_type, variants, module_name)
     gradle_task = ""
     build_type = (output_type == "aab") ? "bundle" : "assemble"
-    variants.split(',').each { 
+    variants.split('|').each { 
         | variant | gradle_task << " #{module_name}:#{build_type}#{variant}"
     }
     return gradle_task
@@ -72,8 +72,8 @@ aabs = Dir.glob("#{build_output_folder}/**/*.aab")
 FileUtils.cp apks, "#{ac_output_folder}"
 FileUtils.cp aabs, "#{ac_output_folder}"
 
-apks = Dir.glob("#{ac_output_folder}/**/*.apk").join(",")
-aabs = Dir.glob("#{ac_output_folder}/**/*.aab").join(",")
+apks = Dir.glob("#{ac_output_folder}/**/*.apk").join("|")
+aabs = Dir.glob("#{ac_output_folder}/**/*.aab").join("|")
 
 puts "Exporting AC_APK_PATH=#{apks}"
 puts "Exporting AC_AAB_PATH=#{aabs}"
