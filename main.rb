@@ -20,7 +20,7 @@ def get_gradle_task(output_type, variants, module_name)
     gradle_task = ""
     build_type = (output_type == "aab") ? "bundle" : "assemble"
     variants.split('|').each { 
-        | variant | gradle_task << " #{module_name}:#{build_type}#{variant}"
+        | variant | gradle_task << " #{module_name}:#{build_type}#{variant.capitalize}"
     }
     return gradle_task
 end
