@@ -16,11 +16,16 @@ ac_output_folder = get_env_variable("AC_OUTPUT_DIR") || abort('Missing output fo
 ac_gradle_params = get_env_variable("AC_GRADLE_BUILD_EXTRA_ARGS") || ""
 ac_project_path = get_env_variable("AC_PROJECT_PATH") || "."
 
+def capitalize_first_char(str) 
+    str[0] = str[0].capitalize
+    return str
+end
+
 def get_gradle_task(output_type, variants, module_name)
     gradle_task = ""
     build_type = (output_type == "aab") ? "bundle" : "assemble"
     variants.split('|').each { 
-        | variant | gradle_task << " #{module_name}:#{build_type}#{variant.capitalize}"
+        | variant | gradle_task << " #{module_name}:#{build_type}#{capitalize_first_char(variant)}"
     }
     return gradle_task
 end
