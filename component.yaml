@@ -1,7 +1,7 @@
 platform: Android
 buildPlatform:
 displayName: "Android Build"
-description: "Build your application for the architectures specified in your project. This step creates an unsigned apk or aab file."
+description: "Build your Android Stduio project with gradlew file."
 inputs:
 - key: "AC_REPOSITORY_DIR"
   defaultValue: "$AC_REPOSITORY_DIR"
@@ -29,13 +29,13 @@ inputs:
 - key: "AC_OUTPUT_TYPE"
   defaultValue: "$AC_OUTPUT_TYPE"
   isRequired: true
-  title: Output type
-  description: "Output type. For example: apk or bundle"
+  title: Output Type
+  description: "Output type. For example: apk or aab"
   helpText:
 - key: "AC_GRADLE_BUILD_EXTRA_ARGS"
   defaultValue: "$AC_GRADLE_BUILD_EXTRA_ARGS"
   isRequired: false
-  title: Gradle build parameters
+  title: Custom Build Arguments
   description: "Add custom build arguments. For example: --stacktrace"
   helpText:
 outputs:
