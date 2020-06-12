@@ -1,5 +1,5 @@
 platform: Android
-buildPlatform:
+buildPlatform: ReactNative, JavaKotlin, Smartface
 displayName: "Android Build"
 description: "Build your Android Stduio project with gradlew file."
 inputs:
