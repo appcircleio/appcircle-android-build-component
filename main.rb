@@ -31,7 +31,7 @@ def get_gradle_task(output_type, variants, module_name)
 end
 
 def run_command(command)
-    puts "@[command] #{command}"
+    puts "@@[command] #{command}"
     status = nil
     stdout_str = nil
     stderr_str = nil
