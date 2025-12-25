@@ -46,7 +46,8 @@ end
 
 gradle_task = get_gradle_task(ac_output_type, ac_variants, ac_module)
 
-build_output_folder = File.join(gradlew_folder_path,"#{ac_module}/build/outputs")
+ac_module_path = ac_module.gsub(':', '/')
+build_output_folder = File.join(gradlew_folder_path,"#{ac_module_path}/build/outputs")
 unless ac_gradle_params.strip.empty?
     gradle_task = "#{gradle_task} #{ac_gradle_params}"
 end
